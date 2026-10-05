@@ -1,0 +1,377 @@
+﻿<Window x:Class="PortalVideojuegos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Portal de Videojuegos"
+        Width="1100"
+        Height="700"
+        MinWidth="900"
+        MinHeight="600"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8">
+
+    <Grid Margin="20">
+
+        <Border BorderBrush="#1E293B"
+                BorderThickness="1"
+                CornerRadius="8"
+                Background="White">
+
+            <Grid>
+
+                <!-- FILAS PRINCIPALES -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+
+
+                <!-- ============================= -->
+                <!-- CABECERA -->
+                <!-- ============================= -->
+
+                <Border Grid.Row="0"
+                        Background="#172337"
+                        CornerRadius="8,8,0,0">
+
+                    <Grid Margin="20,0">
+
+                        <TextBlock Text="🎮  PORTAL DE VIDEOJUEGOS"
+                                   Foreground="White"
+                                   FontSize="25"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"/>
+
+                        <Button Content="Mi perfil"
+                                Width="120"
+                                Height="38"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Background="#2563EB"
+                                Foreground="White"
+                                FontWeight="Bold"/>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- ============================= -->
+                <!-- MENÚ SUPERIOR -->
+                <!-- ============================= -->
+
+                <Border Grid.Row="1"
+                        Background="#26364A">
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+
+                        <Button Content="🛒  TIENDA"
+                                Width="180"
+                                Height="40"
+                                Margin="5"
+                                Background="#2563EB"
+                                Foreground="White"
+                                FontWeight="Bold"/>
+
+                        <Button Content="👥  COMUNIDAD"
+                                Width="180"
+                                Height="40"
+                                Margin="5"
+                                Background="#334155"
+                                Foreground="White"
+                                FontWeight="Bold"/>
+
+                        <Button Content="🎧  SOPORTE"
+                                Width="180"
+                                Height="40"
+                                Margin="5"
+                                Background="#334155"
+                                Foreground="White"
+                                FontWeight="Bold"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ============================= -->
+                <!-- CONTENIDO -->
+                <!-- ============================= -->
+
+                <Grid Grid.Row="2"
+                      Margin="15">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- ============================= -->
+                    <!-- MENÚ LATERAL -->
+                    <!-- ============================= -->
+
+                    <Border Grid.Column="0"
+                            BorderBrush="#CBD5E1"
+                            BorderThickness="1"
+                            CornerRadius="6"
+                            Padding="12"
+                            Margin="0,0,15,0"
+                            Background="#F8FAFC">
+
+                        <StackPanel>
+
+                            <TextBlock Text="MENÚ"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Margin="5,5,5,15"/>
+
+                            <Button Content="⭐  Destacados"
+                                    Height="40"
+                                    Margin="0,0,0,8"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="🎮  Mis juegos"
+                                    Height="40"
+                                    Margin="0,0,0,8"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="⚙  Configuración"
+                                    Height="40"
+                                    Margin="0,0,0,15"
+                                    HorizontalContentAlignment="Left"/>
+
+
+                            <Separator Margin="0,5,0,15"/>
+
+
+                            <TextBlock Text="CATEGORÍAS"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Margin="5,0,5,12"/>
+
+                            <Button Content="⚔  Acción"
+                                    Height="35"
+                                    Margin="0,0,0,5"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="🗺  Aventuras"
+                                    Height="35"
+                                    Margin="0,0,0,5"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="⚽  Deportes"
+                                    Height="35"
+                                    Margin="0,0,0,5"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="♟  Estrategia"
+                                    Height="35"
+                                    Margin="0,0,0,5"
+                                    HorizontalContentAlignment="Left"/>
+
+                            <Button Content="🖥  Simulación"
+                                    Height="35"
+                                    HorizontalContentAlignment="Left"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- ============================= -->
+                    <!-- JUEGOS DESTACADOS -->
+                    <!-- ============================= -->
+
+                    <Border Grid.Column="1"
+                            BorderBrush="#CBD5E1"
+                            BorderThickness="1"
+                            CornerRadius="6"
+                            Padding="15">
+
+                        <Grid>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+
+                            <TextBlock Grid.Row="0"
+                                       Text="JUEGOS DESTACADOS"
+                                       FontSize="25"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"/>
+
+
+                            <!-- TARJETAS DE JUEGOS -->
+
+                            <UniformGrid Grid.Row="1"
+                                         Columns="3">
+
+
+                                <!-- THE WITCHER 3 -->
+
+                                <Border BorderBrush="#CBD5E1"
+                                        BorderThickness="1"
+                                        CornerRadius="6"
+                                        Margin="8"
+                                        Padding="10">
+
+                                    <StackPanel>
+
+                                        <Border Height="190"
+                                                Background="#DDE5EE"
+                                                CornerRadius="5">
+
+                                            <Image Source="Assets/witcher3.jpg"
+                                                   Stretch="UniformToFill"/>
+
+                                        </Border>
+
+                                        <TextBlock Text="The Witcher 3: Wild Hunt"
+                                                   FontSize="17"
+                                                   FontWeight="Bold"
+                                                   Margin="0,12,0,5"
+                                                   TextWrapping="Wrap"/>
+
+                                        <TextBlock Text="RPG · Acción · Aventura"
+                                                   Foreground="#2563EB"
+                                                   Margin="0,0,0,8"/>
+
+                                        <TextBlock Text="Una aventura épica en un enorme mundo abierto."
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,10"/>
+
+                                        <Button Content="Ver juego  →"
+                                                Height="35"
+                                                Background="#2563EB"
+                                                Foreground="White"
+                                                FontWeight="Bold"/>
+
+                                    </StackPanel>
+
+                                </Border>
+
+
+                                <!-- RED DEAD REDEMPTION 2 -->
+
+                                <Border BorderBrush="#CBD5E1"
+                                        BorderThickness="1"
+                                        CornerRadius="6"
+                                        Margin="8"
+                                        Padding="10">
+
+                                    <StackPanel>
+
+                                        <Border Height="190"
+                                                Background="#DDE5EE"
+                                                CornerRadius="5">
+
+                                            <Image Source="Assets/rdr2.jpg"
+                                                   Stretch="UniformToFill"/>
+
+                                        </Border>
+
+                                        <TextBlock Text="Red Dead Redemption 2"
+                                                   FontSize="17"
+                                                   FontWeight="Bold"
+                                                   Margin="0,12,0,5"
+                                                   TextWrapping="Wrap"/>
+
+                                        <TextBlock Text="Acción · Aventura"
+                                                   Foreground="#2563EB"
+                                                   Margin="0,0,0,8"/>
+
+                                        <TextBlock Text="Explora el Salvaje Oeste junto a Arthur Morgan."
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,10"/>
+
+                                        <Button Content="Ver juego  →"
+                                                Height="35"
+                                                Background="#2563EB"
+                                                Foreground="White"
+                                                FontWeight="Bold"/>
+
+                                    </StackPanel>
+
+                                </Border>
+
+
+                                <!-- EA SPORTS FC 24 -->
+
+                                <Border BorderBrush="#CBD5E1"
+                                        BorderThickness="1"
+                                        CornerRadius="6"
+                                        Margin="8"
+                                        Padding="10">
+
+                                    <StackPanel>
+
+                                        <Border Height="190"
+                                                Background="#DDE5EE"
+                                                CornerRadius="5">
+
+                                            <Image Source="Assets/fc24.jpg"
+                                                   Stretch="UniformToFill"/>
+
+                                        </Border>
+
+                                        <TextBlock Text="EA Sports FC 24"
+                                                   FontSize="17"
+                                                   FontWeight="Bold"
+                                                   Margin="0,12,0,5"
+                                                   TextWrapping="Wrap"/>
+
+                                        <TextBlock Text="Deportes · Fútbol"
+                                                   Foreground="#2563EB"
+                                                   Margin="0,0,0,8"/>
+
+                                        <TextBlock Text="Disfruta del fútbol con equipos y jugadores reales."
+                                                   TextWrapping="Wrap"
+                                                   Margin="0,0,0,10"/>
+
+                                        <Button Content="Ver juego  →"
+                                                Height="35"
+                                                Background="#2563EB"
+                                                Foreground="White"
+                                                FontWeight="Bold"/>
+
+                                    </StackPanel>
+
+                                </Border>
+
+                            </UniformGrid>
+
+                        </Grid>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- ============================= -->
+                <!-- PIE -->
+                <!-- ============================= -->
+
+                <Border Grid.Row="3"
+                        Background="#172337"
+                        CornerRadius="0,0,8,8">
+
+                    <TextBlock Text="Portal de Videojuegos - Home"
+                               Foreground="White"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+
+                </Border>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</Window>
